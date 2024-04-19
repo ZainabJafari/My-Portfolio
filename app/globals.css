@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover:bg-violet-600:hover {
+  background-color: #6B46C1;
+}
+@layer base {
+  body {
+    @apply relative bg-white text-base font-normal text-body;
+  }
+  .container-outer {
+    @apply mx-auto rounded-lg bg-white;
+  }
+  .container-inner {
+    @apply p-12;
+  }
+}
+
