@@ -27,10 +27,10 @@ const todoData = [
 
 const Experience: React.FC = () => {
   return (
-    <div className="flex flex-col gap-4 max-sm:mt-6">
+    <div className="flex flex-col gap-4">
       {todoData.map((todo) => (
         <div key={todo.id} className="flex w-[450px] items-center gap-4.5 drop-shadow-lg hover:bg-[#BFE6FB] border border-primary dark:border-[#F58A51] p-4.5 dark:hover:bg-[#441B04] max-sm:w-[300px]">
-          <div className="h-15 w-full max-w-15 items-center justify-center rounded-full border border-stroke bg-gray dark:border-strokedark dark:bg-meta-4 xsm:flex">
+          <div className="h-15 w-full max-w-15 items-center justify-center rounded-full border border-stroke bg-gray dark:border-strokedark dark:bg-meta-4">
             <Image src={todo.logo} width={44} height={44} alt={todo.title} />
           </div>
           <div>

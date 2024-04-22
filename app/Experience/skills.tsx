@@ -60,30 +60,24 @@ const brandData: BRAND[] = [
 const Skills: React.FC = () => {
   return (
     <div>
-      <div className="h-full flex justify-around max-sm:flex-col sm:flex-col md:flex-row max-md:items-center max-md:justify-between max-sm:items-center max-sm:mr-10">
-        <div className="grid grid-cols-3 bg-[#4238d3] dark:bg-[#F58A51] h-full p-12 rounded-tl-[80px] rounded-br-[80px] md:mt-10">
-          {brandData.map((brand, key) => (
-            <div
-              key={key}
-              className={`flex flex-col items-center xl:p-3 ${
-                key !== brandData.length - 1
-                  ? "border-b border-stroke dark:border-strokedark"
-                  : ""
-              }`}
-            >
-              <div className="h-5 w-5 sm:h-8 sm:w-8">
-                <Image src={brand.logo} width={50} height={50} alt="Brand" />
-              </div>
-              <p className="text-white text-sm  dark:text-white">
-                {brand.name}
-              </p>
+<div className="h-full flex flex-col sm:flex-row justify-around items-center sm:mr-0">
+    <div className="grid grid-cols-2 sm:grid-cols-3 w-full sm:w-[400px] bg-[#4238d3] dark:bg-[#F58A51] h-full p-12 rounded-tl-[80px] rounded-br-[80px]">
+        {brandData.map((brand, key) => (
+            <div key={key} className={`flex flex-col items-center xl:p-3 ${key !== brandData.length - 1 ? "border-b border-stroke dark:border-strokedark" : ""}`}>
+                <div className="h-8 w-8">
+                    <Image src={brand.logo} className="w-full h-auto" width={50} height={50} alt="Brand" />
+                </div>
+                <p className="text-white text-sm dark:text-white">
+                    {brand.name}
+                </p>
             </div>
-          ))}
-        </div>
-        <div className="pt-10">
-          <Experience />
-        </div>
-      </div>
+        ))}
+    </div>
+    <div className="pt-10">
+        <Experience />
+    </div>
+</div>
+
     </div>
   );
 };
