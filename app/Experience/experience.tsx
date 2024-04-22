@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
     <div className="flex flex-col gap-4">
       {todoData.map((todo) => (
         <div key={todo.id} className="flex w-[300px] items-center gap-4.5 drop-shadow-lg hover:bg-[#BFE6FB] border border-primary dark:border-[#F58A51] p-4.5 dark:hover:bg-[#441B04] sm:w-[450px] md:w-[350px] lg:w-[450px]">
-          <div className="h-15 w-full max-w-15 items-center justify-center rounded-full border border-stroke bg-gray dark:border-strokedark dark:bg-meta-4">
+          <div className="h-15 w-full max-w-15 items-center justify-center mt-3">
             <Image src={todo.logo} width={44} height={44} alt={todo.title} />
           </div>
           <div>
