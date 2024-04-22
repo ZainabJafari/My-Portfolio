@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <>
       <div className="flex justify-center dark:bg-boxdark h-full pt-3">
-        <div className="max-w-7xl w-full flex justify-around p-4">
-          <div className="w-1/2 flex justify-center">
-            <div className="sm:h-80 sm:w-80 p-1 ">
+        <div className="max-w-7xl w-full flex justify-around p-4 max-md:flex-col ">
+          <div className="w-1/2 flex justify-center  ">
+            <div className="sm:h-80 sm:w-80 p-1 max-md:hidden">
               <Image
                 src={"/images/contact-us.gif"}
                 width={900}

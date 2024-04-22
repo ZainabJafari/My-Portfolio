@@ -61,7 +61,7 @@ const cardsItemsData = [
 const Cards: React.FC = () => {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center max-sm:mr-10">
         {cardsItemsData.map((card, key) => (
           <CardsItems
             key={key}
