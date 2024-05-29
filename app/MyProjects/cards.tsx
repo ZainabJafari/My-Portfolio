@@ -1,6 +1,14 @@
-import CardsItems from "../MyProjects/cardItems";
+import CardsItems from "./cardItems";
 
 const cardsItemsData = [
+  {
+    cardImageSrc: "./images/project7.png",
+    cardTitle: "Streamlining of pressurized devices through digital solutions",
+    cardContent: "This project is currently being developed for Lapine Media",
+    projectUrl: "",
+    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+     ],
+  },
   {
     cardImageSrc: "./images/chatApp.png",
     cardTitle: "Chat App",
@@ -35,7 +43,7 @@ const cardsItemsData = [
     cardTitle: "Backend with Node.js",
     cardContent: "A backend project using Node.js, MongoDB, and Postman (for API testing).",
     projectUrl: "https://github.com/ZainabJafari/Backend-with-javascript",
-    icon: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" , "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"]
+    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" , "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"]
   },
   {
     cardImageSrc: "./images/project2.png",
@@ -47,14 +55,6 @@ const cardsItemsData = [
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
     ],
-  },
-  {
-    cardImageSrc: "./images/project4.png",
-    cardTitle: "Styling Project",
-    cardContent: "My first project utilizing HTML, CSS, and Sass to create and style content",
-    projectUrl: "https://github.com/ZainabJafari/Recipe-page",
-    icon: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
-     ],
   },
 ];
 

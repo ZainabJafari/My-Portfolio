@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Cards from "../cards";
+import Cards from "../../MyProjects/cards";
 import Experience from "../../Experience/skills";
 import Profile from "../../Home/profile";
 import Navbar from "./navbar";
@@ -20,7 +20,7 @@ const TabOne: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-15 pr-20">
           <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 ${
+            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
               openTab === 1 ? activeClasses : inactiveClasses
             }`}
             onClick={() => setOpenTab(1)}
@@ -28,7 +28,7 @@ const TabOne: React.FC = () => {
             About
           </div>
           <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 ${
+            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
               openTab === 2 ? activeClasses : inactiveClasses
             }`}
             onClick={() => setOpenTab(2)}
@@ -36,7 +36,7 @@ const TabOne: React.FC = () => {
             Experience
           </div>
           <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 ${
+            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
               openTab === 3 ? activeClasses : inactiveClasses
             }`}
             onClick={() => setOpenTab(3)}
@@ -44,7 +44,7 @@ const TabOne: React.FC = () => {
             Projects
           </div>
           <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 ${
+            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
               openTab === 4 ? activeClasses : inactiveClasses
             }`}
             onClick={() => setOpenTab(4)}
