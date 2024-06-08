@@ -14,11 +14,7 @@ const Profile = () => {
         Zainab Jafari
       </h1>
       <p className="text-lg leading-loose">
-        I am currently studying to become a frontend developer at KYH in
-        Stockholm and will complete my education in May. With a passion for web
-        development and a strong desire to contribute to exciting projects, I
-        am now seeking opportunities to start my career as a junior front-end
-        developer.
+      I am an ambitious and driven junior frontend developer seeking new opportunities in web development. Having recently completed my education at KYH Yrkeshögskola Stockholm, I am now ready to take the next step in my career.
       </p>
     </div>
     <div className="w-full sm:w-1/2 flex justify-center">
