@@ -40,12 +40,20 @@ const brandData: BRAND[] = [
     name: "Node.js",
   },
   {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-plain-wordmark.svg",
+    name: "MySQL",
+  },
+  {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg",
     name: "Express.js",
   },
   {
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     name: "MongoDB",
+  },
+  {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original-wordmark.svg",
+    name: "Socket.io",
   },
   {
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",

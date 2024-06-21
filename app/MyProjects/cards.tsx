@@ -2,6 +2,23 @@ import CardsItems from "./cardItems";
 
 const cardsItemsData = [
   {
+    cardImageSrc: "./images/project8.png",
+    cardTitle: "Full-Stack Image Posting Project",
+    cardContent: "Upload and post images, utilizing MySQL for data management",
+    projectUrl: "https://github.com/ZainabJafari/SocailPost",
+    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+     ],
+  },
+  {
+    cardImageSrc: "./images/project9.png",
+    cardTitle: "Money Manager",
+    cardContent: "Currently in development. A project focused on managing income and spending, developed using Next.js.",
+    projectUrl: "https://github.com/ZainabJafari/Money_Manager",
+    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original-wordmark.svg" , "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", 
+       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+     ],
+  },
+  {
     cardImageSrc: "./images/project7.png",
     cardTitle: "Streamlining of pressurized devices through digital solutions",
     cardContent: "This project is currently being developed for Lapine Media",
@@ -17,7 +34,7 @@ const cardsItemsData = [
     icon: [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original-wordmark.svg"
     ],
   },
   {
@@ -50,6 +67,17 @@ const cardsItemsData = [
     cardTitle: "Shopping Cart",
     projectUrl: "https://github.com/ZainabJafari/ProjectWithTypescript",
     cardContent: "TypeScript Shopping Cart Implementation",
+    icon: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
+    ],
+  },
+  {
+    cardImageSrc: "./images/project4.png",
+    cardTitle: "HTML and CSS",
+    projectUrl: "https://github.com/ZainabJafari/Recipe-page",
+    cardContent: "Design-Focused Project with HTML and CSS",
     icon: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
