@@ -2,8 +2,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Profile = () => {
+  const router = useRouter()
+
+  const handleClick = () => {
+    router.push('/projects');
+  };
   return (
     <motion.div
       className="h-full"
@@ -35,11 +41,11 @@ const Profile = () => {
             next step in my career.
           </p>
           <div className="flex w-full gap-4 pt-10 justify-center lg:justify-start mb-3">
-            <Link href={'/projects'}>
+            <button onClick={handleClick}>
               <button className="p-4 rounded-lg ring-1 ring-black text-white bg-[#A94E3D]">
                 View My Work
               </button>
-            </Link>
+            </button>
             <Link href={'/contact'}>
               <button className="p-4 rounded-lg ring-1 ring-black text-white bg-[#A94E3D]">
                 Contact Me
