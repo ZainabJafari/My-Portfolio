@@ -1,4 +1,7 @@
-import CardsItems from "./cardItems";
+"use client"
+import CardsItems from "./CardItems";
+import { motion } from 'framer-motion'
+
 
 const cardsItemsData = [
   {
@@ -11,16 +14,16 @@ const cardsItemsData = [
   },
   {
     cardImageSrc: "./images/project9.png",
-    cardTitle: "Money Manager",
-    cardContent: "Currently in development. A project focused on managing income and spending, developed using Next.js.",
-    projectUrl: "https://github.com/ZainabJafari/Money_Manager",
-    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original-wordmark.svg" , "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", 
+    cardTitle: "Car Rental",
+    cardContent: "A platform for managing car rentals",
+    projectUrl: "https://github.com/ZainabJafari/carRental",
+    icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" , "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", 
        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
      ],
   },
   {
-    cardImageSrc: "./images/project7.png",
-    cardTitle: "Streamlining of pressurized devices through digital solutions",
+    cardImageSrc: "./images/project6.png",
+    cardTitle: "Streamlining of pressurized",
     cardContent: "This project is currently being developed for Lapine Media",
     projectUrl: "",
     icon: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" , "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
@@ -88,8 +91,17 @@ const cardsItemsData = [
 
 const Cards: React.FC = () => {
   return (
-    <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center max-sm:mr-10">
+    <motion.div
+      className="container mx-auto px-4 py-8"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
+      <div className="text-center lg:text-left mb-6">
+        <span className="text-[#dad5d4] text-xl">My Projects</span>
+        <div className="border-t border-[#A94E3D] my-2 mx-auto lg:mx-0 w-full max-w-[500px]"></div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center">
         {cardsItemsData.map((card, key) => (
           <CardsItems
             key={key}
@@ -101,7 +113,7 @@ const Cards: React.FC = () => {
           />
         ))}
       </div>
-    </>
+    </motion.div>
   );
 };
 

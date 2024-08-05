@@ -199,6 +199,11 @@ module.exports = {
         12: "12px",
       },
       keyframes: {
+        'border-spin': {
+          '100%': {
+            transform: 'rotate(-360deg)'
+          }
+        },
         linspin: {
           "100%": { transform: "rotate(360deg)" },
         },
@@ -237,5 +242,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [],
 };

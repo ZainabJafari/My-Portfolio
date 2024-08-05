@@ -1,6 +1,8 @@
+"use client";
+
 import { BRAND } from "../../types/brands";
 import Image from "next/image";
-import Experience from "./experience";
+import Experience from "./myExperience";
 
 const brandData: BRAND[] = [
   {
@@ -64,27 +66,34 @@ const brandData: BRAND[] = [
     name: "Figma",
   },
 ];
-
 const Skills: React.FC = () => {
   return (
-    <div>
-<div className="h-full md:flex justify-around items-center pb-4">
-    <div className="grid grid-cols-2 sm:grid-cols-3 w-[300px] sm:w-[500px] md:w-[400px] bg-[#4238d3] dark:bg-[#F58A51] h-full p-12 rounded-tl-[80px] rounded-br-[80px]">
-        {brandData.map((brand, key) => (
-            <div key={key} className={`flex flex-col items-center xl:p-3 ${key !== brandData.length - 1 ? "border-b border-stroke dark:border-strokedark" : ""}`}>
-                <div className="h-8 w-8">
-                    <Image src={brand.logo} className="w-full h-auto" width={50} height={50} alt="Brand" />
-                </div>
-                <p className="text-white text-sm dark:text-white">
-                    {brand.name}
-                </p>
-            </div>
-        ))}
-    </div>
-    <div className="pt-10">
+    <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-10 xl:px-48 lg:pt-30 gap-10">
+      <div className="lg:w-1/2 flex flex-col">
+        <div className="relative text-center lg:text-left">
+          <span className="text-[#dad5d4] text-sm">My Skills</span>
+          <div className="border-t border-[#A94E3D] my-2 mx-auto lg:mx-0 w-full max-w-[500px]"></div>
+          <h1 className="text-white text-md lg:text-lg xl:text-xl max-w-[500px] mx-auto lg:mx-0">
+            A snapshot of what I’m good at and the skills I’ve developed. Check
+            out what I can do and how I can help.
+          </h1>
+        </div>
+
+        <div className="mt-4 md:mt-6 flex justify-center lg:justify-start">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 border border-[#A94E3D] w-full max-w-xl">
+            {brandData.map((brand, key) => (
+              <div key={key} className="flex flex-col items-center">
+                <Image src={brand.logo} width={80} height={80} alt="Brand" className="w-10 h-10 md:w-10 md:h-10" />
+                <p className="text-white text-xs md:text-sm">{brand.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:w-1/2 flex justify-center lg:justify-end mb-3">
         <Experience />
-    </div>
-</div>
+      </div>
     </div>
   );
 };
