@@ -78,7 +78,6 @@ const Skills: React.FC = () => {
             out what I can do and how I can help.
           </h1>
         </div>
-
         <div className="mt-4 md:mt-6 flex justify-center lg:justify-start">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 border border-[#A94E3D] w-full max-w-xl">
             {brandData.map((brand, key) => (
@@ -90,7 +89,6 @@ const Skills: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="lg:w-1/2 flex justify-center lg:justify-end mb-3">
         <Experience />
       </div>

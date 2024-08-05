@@ -2,7 +2,6 @@
 import CardsItems from "./CardItems";
 import { motion } from 'framer-motion'
 
-
 const cardsItemsData = [
   {
     cardImageSrc: "./images/project8.png",

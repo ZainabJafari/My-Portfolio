@@ -11,7 +11,6 @@ const CardsItems: React.FC<CardItemProps> = ({
   const handleButtonClick = () => {
     window.location.href = projectUrl || "";
   };
-
   return (
     <div className="border border-stroke rounded-md bg-white p-4 shadow-default w-full sm:w-full md:w-full lg:w-full mb-6 transition-transform transform hover:scale-105 duration-300 ease-in-out">
       <div className="w-full h-48 relative overflow-hidden rounded-md">
