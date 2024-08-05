@@ -24,7 +24,7 @@ const Profile = () => {
         </div>
 
         <div className="flex flex-col h-1/2 lg:h-full lg:w-1/2 gap-8 items-center lg:items-start justify-center text-center lg:text-left">
-          <p className="text-3xl font-mono font-bold text-white">Hello, It's Me</p>
+          <p className="text-3xl font-mono font-bold text-white">Hello, It&apos;s Me</p>
           <h1 className="text-4xl font-bold md:text-6xl text-white">
             Zainab Jafari
           </h1>

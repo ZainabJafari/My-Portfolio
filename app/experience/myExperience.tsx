@@ -30,8 +30,8 @@ const Experience: React.FC = () => {
         <span className="text-[#dad5d4]">My Experience</span>
         <div className="border-t border-[#A94E3D] my-2 min-md:hidden"></div>
         <h1 className="text-white text-md lg:text-lg xl:text-xl max-w-lg">
-          A rundown of the jobs and experiences I've had. See the highlights of
-          my work journey and the different roles I've taken on.
+          A rundown of the jobs and experiences I&apos;ve had. See the highlights of
+          my work journey and the different roles I&apos;ve taken on.
         </h1>
       </div>
 

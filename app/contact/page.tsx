@@ -61,7 +61,7 @@ const Contact = () => {
             </span>
             <div className="border-t border-[#A94E3D] my-6 mx-auto lg:mx-0 w-full max-w-[500px]"></div>
             <h1 className="text-white py-5 text-4xl sm:text-md lg:text-3lg xl:text-4xl max-w-[500px] mx-auto lg:mx-0">
-              Let's start a project together
+            Let&apos;s start a project together
             </h1>
 
             <div className="flex flex-col gap-3 items-center lg:items-start">

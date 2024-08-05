@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import Navbar from './Header/Navbar'
 import { AnimatePresence } from 'framer-motion'
 import {motion} from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import Navbar from './header/Navbar'
 
 const TransitionProvider = ({children}: any) => {
   const pathName = usePathname()
