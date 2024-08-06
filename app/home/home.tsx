@@ -35,18 +35,7 @@ const Profile = () => {
             education at KYH Yrkeshögskola Stockholm, I am now ready to take the
             next step in my career.
           </p>
-          <div className="flex w-full gap-4 pt-10 justify-center lg:justify-start mb-3">
-            <Link href={'/projects'}>
-              <button className="p-4 rounded-lg ring-1 ring-black text-white bg-[#A94E3D]">
-                View My Work
-              </button>
-            </Link>
-            <Link href={'/contact'}>
-              <button className="p-4 rounded-lg ring-1 ring-black text-white bg-[#A94E3D]">
-                Contact Me
-              </button>
-            </Link>
-          </div>
+      
         </div>
       </div>
     </motion.div>
