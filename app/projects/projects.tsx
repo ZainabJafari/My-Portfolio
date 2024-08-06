@@ -88,7 +88,7 @@ const cardsItemsData = [
   },
 ];
 
-const Cards: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <motion.div
       className="container mx-auto px-4 py-8"
@@ -116,4 +116,4 @@ const Cards: React.FC = () => {
   );
 };
 
-export default Cards;
+export default Projects;

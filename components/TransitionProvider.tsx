@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import {motion} from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Navbar from './Navbar'
+import Tabs from './Tabs'
 
 const TransitionProvider = ({children}: any) => {
   const pathName = usePathname()
@@ -33,7 +34,7 @@ const TransitionProvider = ({children}: any) => {
            animate={{height: "0vh", transition: {delay: 0.5 }}}
           />
         <div className='h-24'>
-        <Navbar />
+        <Tabs />
           </div>
           <div className="h-full w-">
           {children}
