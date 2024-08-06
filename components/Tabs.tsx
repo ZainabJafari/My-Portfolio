@@ -1,72 +1,138 @@
 "use client";
-import React, { useState } from "react";
-import Navbar from "./Navbar";
-import Experience from "@/app/experience/experience";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Projects from "@/app/projects/projects";
 import Contact from "@/app/contact/contact";
+import Skills from "@/app/experience/experience";
+import Profile from "@/app/home/home";
+
+const tabs = [
+  { id: 1, title: "About" },
+  { id: 2, title: "Experience" },
+  { id: 3, title: "Projects" },
+  { id: 4, title: "Contact" },
+];
 
 const Tabs: React.FC = () => {
   const [openTab, setOpenTab] = useState(1);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const activeClasses = "bg-primary dark:bg-[#F58A51] text-white";
-  const inactiveClasses = "bg-gray dark:bg-meta-4 text-black dark:text-white";
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
+
+  const activeClasses = "bg-[#A94E3D] text-white";
+  const inactiveClasses = "bg-gray text-black";
+
+  const topVariant = {
+    closed: { rotate: 0 },
+    opened: { rotate: 45, backgroundColor: "rgb(255,255,255)" },
+  };
+
+  const centerVariant = {
+    closed: { opacity: 1 },
+    opened: { opacity: 0, backgroundColor: "rgb(255,255,255)" },
+  };
+
+  const buttonVariant = {
+    closed: { rotate: 0 },
+    opened: { rotate: -45, backgroundColor: "rgb(255,255,255)" },
+  };
+
+  const listVariant = {
+    closed: { x: "100vw" },
+    opened: {
+      x: 0,
+      transition: { when: "beforeChildren", staggerChildren: 0.2 },
+    },
+  };
+
+  const listItemVariants = {
+    closed: { x: -10, opacity: 0 },
+    opened: { x: 0, opacity: 1 },
+  };
 
   return (
-    <div className="pl-14 dark:border-strokedark dark:bg-boxdark min-h-screen">
-      <div className="mb-7.5 flex flex-wrap gap-6 rounded-lg py-8 px-10 dark:border-strokedark items-center justify-between">
-        <div>
-          <Navbar />
-        </div>
-        <div className="flex flex-wrap gap-15 pr-20">
-          <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
-              openTab === 1 ? activeClasses : inactiveClasses
-            }`}
-            onClick={() => setOpenTab(1)}
-          >
-            About
-          </div>
-          <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
-              openTab === 2 ? activeClasses : inactiveClasses
-            }`}
-            onClick={() => setOpenTab(2)}
-          >
-            Experience
-          </div>
-          <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
-              openTab === 3 ? activeClasses : inactiveClasses
-            }`}
-            onClick={() => setOpenTab(3)}
-          >
-            Projects
-          </div>
-          <div
-            className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-primary hover:text-white dark:hover:bg-[#F58A51] md:text-base lg:px-6 cursor-pointer	 ${
-              openTab === 4 ? activeClasses : inactiveClasses
-            }`}
-            onClick={() => setOpenTab(4)}
-          >
-            Contact
-          </div>
+    <div className="min-h-screen pl-4">
+      <div className="hidden md:flex flex-wrap gap-6 mb-7.5 rounded-lg py-8 px-10 items-center justify-between">
+        <div className="flex flex-wrap gap-20">
+          {tabs.map((tab) => (
+            <div
+              key={tab.id}
+              className={`rounded-md py-3 px-4 text-sm font-medium hover:bg-[#A94E3D] hover:text-white md:text-base lg:px-6 cursor-pointer ${
+                openTab === tab.id ? activeClasses : inactiveClasses
+              }`}
+              onClick={() => setOpenTab(tab.id)}
+            >
+              {tab.title}
+            </div>
+          ))}
         </div>
       </div>
 
+      <div className="md:hidden">
+        <button
+          className="w-10 h-12.5 pt-5 pl-3 flex flex-col justify-between z-50 relative"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          <motion.div
+            variants={topVariant}
+            animate={menuOpen ? "opened" : "closed"}
+            className="w-10 h-1 bg-[#A94E3D] rounded origin-left"
+          ></motion.div>
+          <motion.div
+            variants={centerVariant}
+            animate={menuOpen ? "opened" : "closed"}
+            className="w-10 h-1 bg-[#A94E3D] rounded"
+          ></motion.div>
+          <motion.div
+            variants={buttonVariant}
+            animate={menuOpen ? "opened" : "closed"}
+            className="w-10 h-1 bg-[#A94E3D] rounded origin-left"
+          ></motion.div>
+        </button>
+        {menuOpen && (
+          <motion.div
+            variants={listVariant}
+            initial="closed"
+            animate="opened"
+            className="fixed inset-0 w-screen h-screen bg-[#000] text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+          >
+            {tabs.map((tab) => (
+              <motion.div
+                variants={listItemVariants}
+                key={tab.id}
+                className=""
+                onClick={() => {
+                  setOpenTab(tab.id);
+                  setMenuOpen(false);
+                }}
+              >
+                {tab.title}
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </div>
       <div>
         <div
           className={`leading-relaxed ${openTab === 1 ? "block" : "hidden"}`}
         >
-          <Experience />
-        </div>  
+          <Profile />
+        </div>
         <div
           className={`leading-relaxed ${openTab === 2 ? "block" : "hidden"}`}
         >
-          <Projects />
+          <Skills />
         </div>
         <div
           className={`leading-relaxed ${openTab === 3 ? "block" : "hidden"}`}
         >
+          <Projects />
         </div>
         <div
           className={`leading-relaxed ${openTab === 4 ? "block" : "hidden"}`}

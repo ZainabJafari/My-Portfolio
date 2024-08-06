@@ -68,7 +68,7 @@ const brandData: BRAND[] = [
 ];
 const Skills: React.FC = () => {
   return (
-    <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-10 xl:px-48 lg:pt-30 gap-10">
+    <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-10 xl:px-48 lg:pt-16 gap-8">
       <div className="lg:w-1/2 flex flex-col">
         <div className="relative text-center lg:text-left">
           <span className="text-[#dad5d4] text-sm">My Skills</span>

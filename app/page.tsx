@@ -1,8 +1,10 @@
-import Tabs from "@/components/Tabs";
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <main>
-    </main>
-  );
+    <div>
+    </div>
+  )
 }
+
+export default page

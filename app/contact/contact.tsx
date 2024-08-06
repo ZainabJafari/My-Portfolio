@@ -54,7 +54,7 @@ const Contact = () => {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="h-2/3 flex flex-col mt-24 lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+        <div className="h-2/3 flex flex-col  lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
           <div className="relative text-center lg:text-left lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
             <span className="text-[#dad5d4] text-3xl sm:text-4xl md:text-5xl">
               Contact me
