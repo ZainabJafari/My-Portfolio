@@ -57,7 +57,7 @@ const Tabs: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pl-4">
+    <div className="min-h-screen">
       <div className="hidden md:flex flex-wrap gap-6 mb-7.5 rounded-lg py-8 px-10 items-center justify-between">
         <div className="flex flex-wrap gap-20">
           {tabs.map((tab) => (
@@ -76,7 +76,7 @@ const Tabs: React.FC = () => {
 
       <div className="md:hidden">
         <button
-          className="w-10 h-12.5 pt-5 pl-3 flex flex-col justify-between z-50 relative"
+          className="w-10 h-13 pt-5 pl-3 flex flex-col justify-between z-50 relative"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <motion.div

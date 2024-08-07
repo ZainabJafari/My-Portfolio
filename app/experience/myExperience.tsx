@@ -26,8 +26,8 @@ const todoData = [
 const Experience: React.FC = () => {
   return (
     <div className="flex flex-col gap-8">
-      <div>
-        <span className="text-[#dad5d4]">My Experience</span>
+        <div className="relative text-center lg:text-left">
+        <span className="text-[#dad5d4] text-md">My Experience</span>
         <div className="border-t border-[#A94E3D] my-2 min-md:hidden"></div>
         <h1 className="text-white text-md lg:text-lg xl:text-xl max-w-lg">
           A rundown of the jobs and experiences I&apos;ve had. See the highlights of
@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 pb-6">
         {todoData.map((todo) => (
           <div
             key={todo.title}

@@ -71,19 +71,19 @@ const Skills: React.FC = () => {
     <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-10 xl:px-48 lg:pt-16 gap-8">
       <div className="lg:w-1/2 flex flex-col">
         <div className="relative text-center lg:text-left">
-          <span className="text-[#dad5d4] text-sm">My Skills</span>
+          <span className="text-[#dad5d4] text-md">My Skills</span>
           <div className="border-t border-[#A94E3D] my-2 mx-auto lg:mx-0 w-full max-w-[500px]"></div>
           <h1 className="text-white text-md lg:text-lg xl:text-xl max-w-[500px] mx-auto lg:mx-0">
             A snapshot of what I’m good at and the skills I’ve developed. Check
             out what I can do and how I can help.
           </h1>
         </div>
-        <div className="mt-4 md:mt-6 flex justify-center lg:justify-start">
+        <div className="mt-8 flex justify-center lg:justify-start">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 border border-[#A94E3D] w-full max-w-xl">
             {brandData.map((brand, key) => (
               <div key={key} className="flex flex-col items-center">
-                <Image src={brand.logo} width={80} height={80} alt="Brand" className="w-10 h-10 md:w-10 md:h-10" />
-                <p className="text-white text-xs md:text-sm">{brand.name}</p>
+                <Image src={brand.logo} width={80} height={80} alt="Brand" className="w-12 h-12 md:w-10 md:h-10" />
+                <p className="text-white text-md md:text-sm">{brand.name}</p>
               </div>
             ))}
           </div>

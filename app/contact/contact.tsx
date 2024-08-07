@@ -54,13 +54,13 @@ const Contact = () => {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="h-2/3 flex flex-col  lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+        <div className="h-2/3 flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
           <div className="relative text-center lg:text-left lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
             <span className="text-[#dad5d4] text-3xl sm:text-4xl md:text-5xl">
               Contact me
             </span>
             <div className="border-t border-[#A94E3D] my-6 mx-auto lg:mx-0 w-full max-w-[500px]"></div>
-            <h1 className="text-white py-5 text-4xl sm:text-md lg:text-3lg xl:text-4xl max-w-[500px] mx-auto lg:mx-0">
+            <h1 className="text-white py-5 text-3xl sm:text-md lg:text-2xl xl:text-4xl max-w-[500px] mx-auto lg:mx-0">
             Let&apos;s start a project together
             </h1>
 
@@ -180,7 +180,7 @@ const Contact = () => {
           <form
             onSubmit={sendEmail}
             ref={form}
-            className="mt-20 lg:mt-0 lg:w-1/2 rounded-xl flex flex-col gap-6 p-4 mb-3 sm:p-8 md:p-10 lg:p-12 border-2 border-[#A94E3D]"
+            className="mt-20 m-5 lg:mt-0 lg:w-1/2 rounded-xl flex flex-col gap-6 p-4 mb-3 sm:p-8 md:p-10 lg:p-12 border-2 border-[#A94E3D]"
           >
             <span className="text-white text-lg sm:text-xl">Message:</span>
             <textarea
